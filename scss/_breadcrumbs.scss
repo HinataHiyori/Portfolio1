@@ -1,0 +1,23 @@
+.breadcrumbs-container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  @include sp {
+    width: 90%;
+  }
+  .breadcrumbs {
+    display: flex;
+    &__list {
+      &::after {
+        content: "/";
+        padding: 0 0.3rem;
+      }
+      &:last-child::after {
+        display: none;
+      }
+    }
+    &__text {
+      color: #80D0C7;
+    }
+  }
+}

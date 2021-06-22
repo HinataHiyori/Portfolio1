@@ -1,0 +1,47 @@
+.flow {
+  position: relative;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  padding-top: 2rem;
+  .flow__img-container {
+    width: 25%;
+    display: flex;
+    .flow__img {
+      width: 70%;
+      height: 70%;
+      object-fit: contain;
+      margin: 0 auto;
+      @include sp {
+        height: auto;
+        align-self: flex-start;
+      }
+    }
+  }
+  .flow__article {
+    width: 75%;
+    letter-spacing: 0.2rem;
+    @include sp {
+      letter-spacing: 0;
+    }
+    .flow_name {
+      font-size: 1.8rem;
+      font-weight: 700;
+      @include gra-color(90deg);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  .flow__num {
+    font-size: 5rem;
+    line-height: 5rem;
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include sp {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+  }
+}

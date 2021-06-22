@@ -1,0 +1,26 @@
+.footer-category {
+  font-size: 1.5rem;
+  @include sp {
+    align-self: center;
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    @include sp {
+      width: 100%;
+    }
+    li {
+      color:  #13547A;
+      background: #80D0C7;
+      font-size: 1rem;
+      box-sizing: border-box;
+      margin: 0.4rem 0.3rem;
+      border-radius: 0.3rem;
+      text-align: center;
+    }
+  }
+}
