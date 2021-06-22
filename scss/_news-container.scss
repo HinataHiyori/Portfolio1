@@ -34,7 +34,9 @@
     padding: 0 0.5rem;
     margin-left: 1rem;
   }
-  &:hover {
-    opacity: 0.6;
+  &__title:hover {
+    h3 {
+      opacity: 0.6;
+    }
   }
 }
