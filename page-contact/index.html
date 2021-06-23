@@ -50,15 +50,29 @@
         <form class="form" action="">
           <div class="form_mail">
             <label for="email">メールアドレス</label>
-            <input id="email" type="email" placeholder="abcd@gmail.com" required>
+            <input class="input_form" id="email" type="email" placeholder="abcd@gmail.com" required>
             <p class="valid">*メールアドレスを入力してください。</p>
           </div>
           <div class="form_name">
             <label for="name">お名前</label>
-            <input id="name" type="text" placeholder="WEB 太郎" required>
+            <input class="input_form" id="name" type="text" placeholder="WEB 太郎" required>
             <p class="valid">*お名前を入力してください。</p>
           </div>
           <div class="form_text">
+            <div class="select_container">
+              <div class="radio_box">
+                <input id="radio_1" class="input_radio" type="radio" name="q1" value="見積依頼">
+                <label for="radio_1">見積依頼</label>
+              </div>
+              <div class="radio_box">
+                <input id="radio_2" class="input_radio" type="radio" name="q1" value="提案・相談">
+                <label for="radio_2">ご提案・ご相談</label>
+              </div>
+              <div class="radio_box">
+                <input id="radio_3" class="input_radio" type="radio" name="q1" value="その他の相談">
+                <label for="radio_3">その他の相談</label>
+              </div>
+            </div>
             <label for="text">ご相談内容</label>
             <textarea name="kanso" id="text" cols="40" rows="10"></textarea>
           </div>
@@ -67,13 +81,6 @@
       </div>
     </div>
 
-    <div class="contact">
-      <h2 class="contact__title">contact</h2>
-      <div class="contact__content">
-        <p>HP制作/お見積りのご相談はこちら</p>
-        <a class="button arrow" href="#">contact</a>
-      </div>
-    </div>
   </main>
   <footer class="footer">
     <div class="footer__content">

@@ -1797,7 +1797,7 @@ main {
           box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2) inset;
 }
 
-input {
+.input_form {
   width: 100%;
   height: 2rem;
   border-radius: 1rem;
@@ -1808,17 +1808,69 @@ input {
           box-sizing: border-box;
 }
 
-input:focus {
+.input_form:focus {
   outline: none;
   -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2) inset;
           box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2) inset;
 }
 
-input:valid + .valid {
+.input_form:valid + .valid {
   color: #fff;
 }
 
-input:invalid + .valid {
+.input_form:invalid + .valid {
   color: red;
+}
+
+.select_container {
+  margin-bottom: 1rem;
+}
+
+.select_container .radio_box input[type="radio"] {
+  display: none;
+}
+
+.select_container .radio_box input[type="radio"]:checked + label:before {
+  border-color: #2d8a6e;
+}
+
+.select_container .radio_box input[type="radio"]:checked + label:after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.select_container .radio_box label {
+  display: inline-block;
+  min-height: 30px;
+  position: relative;
+  padding: 0 30px;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.select_container .radio_box label:before, .select_container .radio_box label:after {
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.select_container .radio_box label:before {
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #80D0C7;
+}
+
+.select_container .radio_box label:after {
+  top: 7px;
+  left: 7px;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background: #80D0C7;
 }
 /*# sourceMappingURL=style.css.map */
