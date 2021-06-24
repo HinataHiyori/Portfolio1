@@ -1,0 +1,36 @@
+.page_title {
+  @include gra-color(90deg);
+  padding: 4rem 3rem;
+  display: flex;
+  @include sp {
+    display: block;
+    padding: 2rem 1rem;
+  }
+  &__img {
+    width: 50%;
+    @include sp {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  &__text-container {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    @include sp {
+      width: 100%;
+    }
+  }
+}
+.page_title__text {
+  padding: 1rem;
+  color: #fff;
+  &--data {
+    font-size: 1.2rem;
+  }
+  &--title {
+
+  }
+}

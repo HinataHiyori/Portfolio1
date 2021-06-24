@@ -1,0 +1,35 @@
+.top-content {
+  width: 100%;
+  z-index: 1;
+  &__bg {
+    width: 55%;
+    padding: 2rem 0;
+    @include gra-color(-90deg);
+    @include sp {
+      width: 75%;
+    }
+    &--text {
+      color: #ffffff;
+      width: 80%;
+      margin-left: auto;
+      @include sp {
+        width: 95%;
+      }
+      .top-content_title {
+        font-size: 42px;
+        letter-spacing: 0.3rem;
+        margin-bottom: 1rem;
+        @include sp {
+          font-size: 1.5rem;
+        }
+      }
+      .top-content_article {
+        font-size: 24px;
+        width: 90%;
+        @include sp {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

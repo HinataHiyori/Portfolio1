@@ -1,0 +1,11 @@
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  &__col3 {
+    width: 32%;
+    margin-bottom: 1rem;
+  }
+}
