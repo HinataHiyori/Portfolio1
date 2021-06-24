@@ -1918,7 +1918,7 @@ main {
 .select_li .radio-inline__input:checked + .radio-inline__label {
   background: #80D0C7;
   color: #13547A;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
 }
 
 .select_li .radio-inline__input:focus + .radio-inline__label {
