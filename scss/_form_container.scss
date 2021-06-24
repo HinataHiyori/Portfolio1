@@ -10,20 +10,20 @@
 .form {
   width: 60%;
   margin: 0 auto;
-  padding: 5rem 0;
+  padding: 3rem 0;
   @include sp {
     width: 100%;
     padding: 1rem;
     box-sizing: border-box;
   }
   .form_mail {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
   .form_name {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
   .form_text {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     textarea {
       width: 100%;
       border-radius: 0.5rem;

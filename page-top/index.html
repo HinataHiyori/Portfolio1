@@ -5,6 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portforio</title>
   <link rel="stylesheet" href="../asset/css/style.css">
+  <script src="../asset/js/jquery-3.6.0.min.js"></script>
+  
+  <script>
+    $(function(){
+      $(window).on('scroll', function () {
+        $(".fadeIn").each(function() {
+          var scroll = $(window).scrollTop(); 
+          var elementPosition = $(this).offset().top; 
+          var windowHeihgt = $(window).height();
+          if (scroll > elementPosition - windowHeihgt + 200) {
+            $(this).addClass("isShow");
+          }
+        })
+      });
+    });
+  </script>
 </head>
 <body>
   <header class="header">
@@ -25,7 +41,7 @@
         <li><a class="menu__link" href="../page-archive/index.html">実績一覧</a></li>
         <li><a class="menu__link" href="../page-single/index.html">blog</a></li>
       </ul>
-      <a class="button" href="">contact</a>
+      <a class="button" href="../page-contact/index.html">contact</a>
     </nav>
   </header>
   <main>
@@ -34,7 +50,7 @@
         <div class="top-content">
           <div class="top-content__bg">
             <div class="top-content__bg--text">
-              <h1 class="top-content_title">web制作の相談、<br>
+              <h1 class="top-content_title fadeIn">web制作の相談、<br>
                 PROにお任せください。</h1>
                 <p class="top-content_article">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
             </div>
@@ -44,7 +60,7 @@
     </div>
 
     <div class="section__wrapper">
-      <h2 class="section__title">NEWS</h2>
+      <h2 class="section__title fadeIn">NEWS</h2>
       <div class="news__wrapper">
         <div class="news__container">
           <article class="news">
@@ -90,13 +106,13 @@
       </div>
       <div class="work-container__content">
         <div class="work-container__content--article first">
-          <h2>about</h2>
+          <h2 class="fadeIn">about</h2>
           <h3>HPから想像する未来</h3>
           <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
           <a class="button arrow" href="../page-about/index.html">about</a>
         </div>
         <div class="work-container__content--article second">
-          <h2>Service</h2>
+          <h2 class="fadeIn">Service</h2>
           <h3>ご要望以上のものを<br>
           制作します。</h3>
           <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
@@ -113,7 +129,7 @@
 
     <div class="blog-container">
       <div class="blog-container__title">
-        <h2>Blog</h2>
+        <h2 class="fadeIn">Blog</h2>
       </div>
       <div class="row">
         <div class="row__col3">

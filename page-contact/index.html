@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portforio</title>
   <link rel="stylesheet" href="../asset/css/style.css">
+  <script src="../asset/js/jquery-3.6.0.min.js"></script>
+    
+  <script>
+      $(function() {
+        $('.select_li').find('li').click(function() {
+          var index = $(this).index();
+          var contentsLi = $('.form_work').find('li');
+          contentsLi.addClass('is-hidden');
+          contentsLi.eq(index).removeClass('is-hidden');
+        });
+      });
+  </script>
 </head>
 <body>
   <header class="header">
@@ -47,37 +59,94 @@
     <div class="section__wrapper">
       <h2 class="section__title contact-section__title">見積もりはしないけど相談する。</h2>
       <div class="form_container">
-        <form class="form" action="">
-          <div class="form_mail">
-            <label for="email">メールアドレス</label>
-            <input class="input_form" id="email" type="email" placeholder="abcd@gmail.com" required>
-            <p class="valid">*メールアドレスを入力してください。</p>
-          </div>
-          <div class="form_name">
-            <label for="name">お名前</label>
-            <input class="input_form" id="name" type="text" placeholder="WEB 太郎" required>
-            <p class="valid">*お名前を入力してください。</p>
-          </div>
-          <div class="form_text">
-            <div class="select_container">
-              <div class="radio_box">
-                <input id="radio_1" class="input_radio" type="radio" name="q1" value="見積依頼">
-                <label for="radio_1">見積依頼</label>
+        <ul class="select_li">
+          <li>
+            <input id="pra" class="radio-inline__input" type="radio" name="accessible-radio" value="item-1" checked="checked"/>
+            <label class="radio-inline__label" for="pra">
+                個人の方
+            </label>
+          </li>
+          <li>
+            <input id="cor" class="radio-inline__input" type="radio" name="accessible-radio" value="item-2"/>
+            <label class="radio-inline__label" for="cor">
+                法人の方
+            </label>
+          </li>
+        </ul>
+
+        <ul class="form_work">
+          <li>
+            <form class="form" action="">
+              <div class="form_name">
+                <label for="name">お名前</label>
+                <input class="input_form" id="name" type="text" placeholder="WEB 太郎" required>
+                <p class="valid">*お名前を入力してください。</p>
               </div>
-              <div class="radio_box">
-                <input id="radio_2" class="input_radio" type="radio" name="q1" value="提案・相談">
-                <label for="radio_2">ご提案・ご相談</label>
+              <div class="form_mail">
+                <label for="email">メールアドレス</label>
+                <input class="input_form" id="email" type="email" placeholder="abcd@gmail.com" required>
+                <p class="valid">*メールアドレスを入力してください。</p>
               </div>
-              <div class="radio_box">
-                <input id="radio_3" class="input_radio" type="radio" name="q1" value="その他の相談">
-                <label for="radio_3">その他の相談</label>
+              <div class="form_text">
+                <div class="select_container">
+                  <div class="radio_box">
+                    <input id="radio_1" class="input_radio" type="radio" name="q1" value="見積依頼">
+                    <label for="radio_1">お見積依頼</label>
+                  </div>
+                  <div class="radio_box">
+                    <input id="radio_2" class="input_radio" type="radio" name="q1" value="提案・相談">
+                    <label for="radio_2">ご提案・ご相談</label>
+                  </div>
+                  <div class="radio_box">
+                    <input id="radio_3" class="input_radio" type="radio" name="q1" value="その他の相談">
+                    <label for="radio_3">その他</label>
+                  </div>
+                </div>
+                <label for="text">ご相談内容</label>
+                <textarea name="kanso" id="text" cols="40" rows="10"></textarea>
               </div>
-            </div>
-            <label for="text">ご相談内容</label>
-            <textarea name="kanso" id="text" cols="40" rows="10"></textarea>
-          </div>
-          <a class="form_button button" href="">送信する</a>
-        </form>
+              <a class="form_button button" href="">送信する</a>
+            </form>
+          </li>
+          <li class="is-hidden">
+            <form class="form" action="">
+              <div class="form_name">
+                <label for="name">会社名</label>
+                <input class="input_form" id="cor_name" type="text" placeholder="株式会社 太郎" required>
+                <p class="valid">*お名前を入力してください。</p>
+              </div>
+              <div class="form_name">
+                <label for="name">担当者名</label>
+                <input class="input_form" id="cor_T_name" type="text" placeholder="お名前 太郎">
+                <p class="valid">*お名前を入力してください。</p>
+              </div>
+              <div class="form_mail">
+                <label for="email">メールアドレス</label>
+                <input class="input_form" id="cor_email" type="email" placeholder="abcd@gmail.com" required>
+                <p class="valid">*メールアドレスを入力してください。</p>
+              </div>
+              <div class="form_text">
+                <div class="select_container">
+                  <div class="radio_box">
+                    <input id="cor_radio_1" class="input_radio" type="radio" name="q1" value="見積依頼">
+                    <label for="cor_radio_1">見積依頼</label>
+                  </div>
+                  <div class="radio_box">
+                    <input id="cor_radio_2" class="input_radio" type="radio" name="q1" value="提案・相談">
+                    <label for="cor_radio_2">ご提案・ご相談</label>
+                  </div>
+                  <div class="radio_box">
+                    <input id="cor_radio_3" class="input_radio" type="radio" name="q1" value="その他の相談">
+                    <label for="cor_radio_3">その他の相談</label>
+                  </div>
+                </div>
+                <label for="text">ご相談内容</label>
+                <textarea name="kanso" id="text" cols="40" rows="10"></textarea>
+              </div>
+              <a class="form_button button" href="">送信する</a>
+            </form>
+          </li>
+        </ul>
       </div>
     </div>
 
