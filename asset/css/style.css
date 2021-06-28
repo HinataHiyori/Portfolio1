@@ -389,6 +389,10 @@ button {
   background: linear-gradient(90deg, #80D0C7, #13547A);
 }
 
+html, body {
+  font-family: "Nico Moji";
+}
+
 main {
   padding-top: 80px;
 }
@@ -592,8 +596,8 @@ main {
 
 .fadeIn {
   opacity: 0;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -602,6 +606,10 @@ main {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+.skill__level img {
+  width: 35px;
 }
 
 .top-container__bg {
@@ -910,11 +918,15 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 1rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .article-card:hover {
-  -webkit-box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.15);
-          box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 15px 10px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 15px 10px 10px rgba(0, 0, 0, 0.15);
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 .article-card__img {
@@ -1114,9 +1126,9 @@ main {
 .second-about {
   position: relative;
   width: 85%;
-  height: 622px;
+  height: auto;
   margin-left: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
 }
 
 @media (max-width: 480px) {
@@ -1134,6 +1146,12 @@ main {
   padding: 5rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+  .second-about .second-about__bg {
+    width: 75%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1159,7 +1177,14 @@ main {
   -webkit-box-shadow: 0px 4px 34px 0px #000000 5%;
           box-shadow: 0px 4px 34px 0px #000000 5%;
   position: absolute;
-  bottom: 0;
+  bottom: 30px;
+}
+
+@media (max-width: 992px) {
+  .second-about .second-about__text-container {
+    width: 50%;
+    padding: 2.5rem 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1175,6 +1200,12 @@ main {
   margin-bottom: 1rem;
 }
 
+@media (max-width: 992px) {
+  .second-about .second-about__text-container .second-about__title {
+    font-size: 1.3rem;
+  }
+}
+
 @media (max-width: 480px) {
   .second-about .second-about__text-container .second-about__title {
     font-size: 1.5rem;
@@ -1184,6 +1215,12 @@ main {
 .second-about .second-about__text-container .second-about__text {
   font-size: 1.5rem;
   font-weight: 300;
+}
+
+@media (max-width: 992px) {
+  .second-about .second-about__text-container .second-about__text {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1230,10 +1267,6 @@ main {
 
 .skill__level {
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(#80D0C7), to(#13547A));
-  background: linear-gradient(90deg, #80D0C7, #13547A);
-  background-repeat: no-repeat;
-  background-size: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -1,3 +1,7 @@
+html, body {
+  font-family: "Nico Moji";
+}
+
 main {
   padding-top: 80px;
 }
@@ -132,14 +136,4 @@ main {
       box-sizing: border-box;
     }
   }
-}
-
-.fadeIn {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: 1s;
-}
-.fadeIn.isShow {
-  opacity: 1;
-  transform: translateY(0);
 }

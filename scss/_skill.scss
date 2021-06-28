@@ -22,9 +22,6 @@
   }
   &__level {
     width: 100%;
-    @include gra-color(90deg);
-    background-repeat: no-repeat;
-    background-size: 80%;
     display: flex;
     justify-content: space-around;
   }

@@ -1,0 +1,17 @@
+// 文字エフェクト
+.fadeIn {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 1s;
+}
+.fadeIn.isShow {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+// 星評価
+.skill__level {
+  img {
+    width: 35px;
+  }
+}

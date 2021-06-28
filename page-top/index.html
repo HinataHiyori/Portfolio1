@@ -2,25 +2,13 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>BuzzLIFEyear</title>
+  <link rel="icon" type="image/x-icon" href="../asset/images/rocket-icon.png">
   <link rel="stylesheet" href="../asset/css/style.css">
   <script src="../asset/js/jquery-3.6.0.min.js"></script>
-  
-  <script>
-    $(function(){
-      $(window).on('scroll', function () {
-        $(".fadeIn").each(function() {
-          var scroll = $(window).scrollTop(); 
-          var elementPosition = $(this).offset().top; 
-          var windowHeihgt = $(window).height();
-          if (scroll > elementPosition - windowHeihgt + 200) {
-            $(this).addClass("isShow");
-          }
-        })
-      });
-    });
-  </script>
+  <script src="../asset/js/jquery.main.js"></script>
 </head>
 <body>
   <header class="header">
@@ -50,7 +38,7 @@
         <div class="top-content">
           <div class="top-content__bg">
             <div class="top-content__bg--text">
-              <h1 class="top-content_title fadeIn">web制作の相談、<br>
+              <h1 class="top-content_title">web制作の相談、<br>
                 PROにお任せください。</h1>
                 <p class="top-content_article">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
             </div>
