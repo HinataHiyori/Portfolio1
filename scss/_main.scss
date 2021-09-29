@@ -73,6 +73,9 @@ main {
       justify-content: space-between;
       flex-wrap: wrap;
       padding: 3rem;
+      @include sp {
+        padding: 1.5rem;
+      }
     }
   }
 }
